@@ -42,6 +42,6 @@ jobs:
             - name: Build
               run: |
                   echo $LD_PRELOAD
-                  ./gradlew assembleRelease -Dscan.tag.${{github.run_number}}  -Dscan.tag.${{ matrix.variant }} -Dscan.tag.experiment-resources
+                  ./gradlew assembleDebug -Dscan.tag.${{github.run_number}}  -Dscan.tag.${{ matrix.variant }} -Dscan.tag.experiment-resources-debug
               env:
                   DEVELOCITY_ACCESS_KEY: ${{ secrets.GE_SOLUTIONS_ACCESS_TOKEN }}
