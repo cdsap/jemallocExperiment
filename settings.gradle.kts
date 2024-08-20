@@ -23,6 +23,19 @@ pluginManagement {
     }
 }
 
+plugins {
+    id("com.gradle.develocity") version "3.18"
+}
+
+develocity {
+    server = "http://ge.solutions-team.gradle.com"
+    allowUntrustedServer = true
+    buildScan {
+        uploadInBackground.set(false)
+        publishing { true}
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
     repositories {
