@@ -1,7 +1,7 @@
 name: Run Gradle on PRs
 on:
     push:
-        branches: [ main]
+        branches: [ test_8_10_2]
 jobs:
     execution:
         runs-on: ubuntu-latest
